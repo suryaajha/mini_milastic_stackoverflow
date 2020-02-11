@@ -21,6 +21,10 @@ gem 'jbuilder', '~> 2.7'
 # Bootstrap 4 rubygem for Rails / Sprockets / Hanami / etc https://rubygems.org/gems/bootstrap
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
+gem "bootstrap_form", "~> 4.0"
+
+# Devise Gem for authentication
+gem 'devise'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -45,6 +49,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :test do

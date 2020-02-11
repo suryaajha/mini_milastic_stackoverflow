@@ -1,8 +1,9 @@
-<form>
-  Name : <input type="text" name="name"> <br>
-  Username : <input type="text" name="username"> <br>
-  Email : <input type="email" name="email"> <br>
-  Password : <input type="password" name="password"> <br>
-  Confirm Password : <input type="password" name="confirm_password"> <br>
-  <input type="submit" value="Submit">
-</form>
+<%= bootstrap_form_for(@user) do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :username %>
+  <%= f.email_field :email %>
+  <%= f.password_field :password %>
+  <%= f.password_field :password_conf %>
+  <%= f.text_area :bio %>
+  <%= f.submit "Sign Up" %>
+<% end %>
