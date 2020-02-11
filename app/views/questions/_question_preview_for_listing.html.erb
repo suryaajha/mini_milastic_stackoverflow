@@ -1,0 +1,8 @@
+<div>
+  <p>Votes: <%= question.votes %></p>
+  <p>Answers: 0</p>
+
+  <p><%= question.title %></p>
+  <p>Question Tags</p>
+  <p><%= "asked about #{time_ago_in_words(question.created_at)} ago"  %></p>
+</div>
