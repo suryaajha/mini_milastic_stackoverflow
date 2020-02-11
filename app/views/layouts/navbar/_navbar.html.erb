@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%#= link_to image_tag("https://srv-file5.gofile.io/download/0mYsmO/stackoverflow.png", width: "30", height: "30", class: "d-inline-block align-top", alt:""), {:skip_relative_url_root => root_path}, class: "navbar-brand"%>
+  <a class="navbar-brand" href="/">
+    <img src="https://srv-file5.gofile.io/download/0mYsmO/stackoverflow.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    MiniStackOverflow
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <%= render 'layouts/navbar/queryform' %>
+
+  <ul class="nav navbar-nav navbar-right">
+    <% if user_signed_in? %>
+      <%= render 'layouts/navbar/signed_in' %>
+    <% else %>
+      <%= render 'layouts/navbar/not_signed_in' %>
+    <% end %>
+  </ul>
+</nav>
