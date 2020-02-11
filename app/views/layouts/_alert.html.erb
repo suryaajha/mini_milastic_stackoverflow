@@ -1,0 +1,16 @@
+<% if flash[:notice] %>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%= flash[:notice] %>
+    <span type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </span>
+  </div>
+<% end %>
+<% if flash[:alert] %>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%= flash[:alert] %>
+    <span type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </span>
+  </div>
+<% end %>

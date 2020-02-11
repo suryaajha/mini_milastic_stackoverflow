@@ -10,16 +10,8 @@
   </head>
   <body>
     <%= render "layouts/navbar/navbar" %>
-    <% if flash[:notice] %>
-      <div class="alert alert-success" role="alert">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
-    <% if flash[:alert] %>
-      <div class="alert alert-danger" role="alert">
-        <%= flash[:alert] %>
-      </div>
-    <% end %>
+
+    <%= render "layouts/alert" %>
     <%= yield %>
   </body>
 </html>
