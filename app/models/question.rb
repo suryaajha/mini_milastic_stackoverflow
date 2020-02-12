@@ -1,7 +1,9 @@
 class Question < ApplicationRecord
   has_many :taggings
   has_many :tags, through: :taggings
+
   belongs_to :user
+  has_many :answers
 
   def tags=(all_tags)
     all_uniq_tags = all_tags.split(",").collect { |tag| tag.strip.downcase }.uniq
