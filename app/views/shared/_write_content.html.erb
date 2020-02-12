@@ -1,0 +1,28 @@
+<%= render 'shared/load_files' %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h1>Write a <%= resource_name%>?</h1>
+      <textarea id="smde" class="CodeMirror"></textarea>
+    </div>
+    <div class="col-6 reader">
+      <h1>Preview</h1>
+      <div id="write_here">
+      </div>
+    </div>
+  </div>
+  <%= form_tag(resource_path, id: "post_question_id")  do %>
+    <% if !resource_name %>
+      <%= label_tag "Enter Comma separated tags" %>
+      <%= text_field_tag :tags %>
+    <% end %>
+    <%= hidden_field_tag :title %>
+    <%= hidden_field_tag :description %>
+    <%= submit_tag %>
+  <% end %>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.js'></script>
+<script src='/markdownsupport.js'></script>

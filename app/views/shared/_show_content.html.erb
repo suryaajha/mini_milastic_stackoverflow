@@ -1,0 +1,23 @@
+<div>
+  <div class="row">
+    <div class="col-1 text-center">
+      <%= link_to question_vote_path(resource), method: :put do %>
+       <%= fa_icon "caret-up 3x" %>
+      <% end %>
+      <br>
+      <%= fa_icon "caret-down 3x" %> <br>
+      <span class="badge badge-danger p-2"><%= resource.votes %></span>
+    </div>
+    <div class="col">
+      <% if resource.class == Question %>
+        <h1><%= resource.title %></h1>
+      <% end %>
+      <div style="display: block" class="content_area">
+        <%= resource.description %>
+      </div>
+      <% if resource.class == Question %>
+        <%= render 'question_tags', question: resource %>
+      <% end %>
+    </div>
+  </div>
+</div>

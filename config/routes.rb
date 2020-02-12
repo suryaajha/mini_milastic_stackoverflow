@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   root to: "home#index"
   get 'account', to: 'users#show'
 
-  resources :questions
+  resources :questions do
+    resource :vote, only: [:update]
+    resources :answers, only: [:create]
+  end
+
   resources :taggings, param: :tag
 end

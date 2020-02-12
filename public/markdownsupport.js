@@ -7,8 +7,6 @@ var simplemde = new SimpleMDE({element: $("#smde")[0], toolbar: ["bold", "italic
 
 $(document).ready(function() {
     $('#post_question_id').submit(function(e) {
-        // your code here
-        alert('Hello') ;
         $('#title').val(document.getElementById("write_here").firstChild.innerHTML);
         let description = document.getElementById("write_here").innerHTML.split("\n");
         description.shift()

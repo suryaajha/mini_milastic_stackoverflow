@@ -1,9 +1,14 @@
-<h1><%= @question.title %></h1>
-<div style="display: block" id="question_area_id">
-  <%= @question.description %>
-</div>
+<!--Show Question-->
+<%= render 'shared/show_content', locals = {resource: @question } %>
 
-<%= render 'question_tags', question: @question %>
+<h1> Answers </h1>
+
+<!--Show All Ansers-->
+<%= render 'shared/show_content', locals = {resource: @question } %>
+
+<!--Show Panel for writing answer-->
+<%= render partial: 'shared/write_content', locals: {resource_name: 'Answer', resource_path: question_answers_path(@question)} %>
+
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 <script src='/page_setup.js'></script>
