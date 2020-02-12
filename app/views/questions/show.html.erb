@@ -4,8 +4,8 @@
 <h1> Answers </h1>
 
 <!--Show All Answers-->
-<% @question.answers.each do |question| %>
-  <%= render 'shared/show_content', locals = {resource: question } %>
+<% @question.answers.each do |answer| %>
+  <%= render 'shared/show_content', locals = {resource: answer } %>
 <% end %>
 
 <!--Show Panel for writing answer-->
