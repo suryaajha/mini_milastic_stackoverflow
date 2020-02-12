@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get 'account', to: 'users#show'
 
   resources :questions
-  post 'account', to: 'users#test'
+  resources :taggings, param: :tag
 end

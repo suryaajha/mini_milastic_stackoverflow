@@ -1,0 +1,3 @@
+<% @question.tags.each do |tag| %>
+  <a href=<%= tagging_path(tag.name) %> class="badge badge-primary"><%= tag %></a>
+<% end %>
