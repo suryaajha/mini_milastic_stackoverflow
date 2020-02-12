@@ -23,6 +23,10 @@ class UsersController < ApplicationController
     p new_user_registration_path.class
   end
 
+  def test
+    
+  end
+
   private
 
   def users_params

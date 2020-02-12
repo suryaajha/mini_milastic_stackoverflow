@@ -4,4 +4,7 @@ Rails.application.routes.draw do
 
   root to: "home#index"
   get 'account', to: 'users#show'
+
+  resources :questions
+  post 'account', to: 'users#test'
 end

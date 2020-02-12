@@ -1,0 +1,38 @@
+<% content_for :load_files do %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/codemirror.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.css'>
+<!--  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css'>-->
+<% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h1>Write a Question?</h1>
+      <textarea id="smde" class="CodeMirror"></textarea>
+    </div>
+    <div class="col-6 reader">
+      <h1>Preview</h1>
+      <div id="write_here">
+      </div>
+    </div>
+  </div>
+  <!--<div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <button type="button" class="btn btn-primary" onclick="custom_post('http://localhost:3000/account', do_some)">Post!</button>
+      </div>
+    </div>
+  </div>-->
+  <%= form_tag(questions_path, id: "post_question_id")  do %>
+    <%= label_tag "Enter Comma separated tags" %>
+    <%= text_field_tag :tags %>
+    <%= hidden_field_tag :title %>
+    <%= hidden_field_tag :description %>
+    <%= submit_tag %>
+  <% end %>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.js'></script>
+<script src='/markdownsupport.js'></script>
