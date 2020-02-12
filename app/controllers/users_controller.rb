@@ -8,10 +8,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @questions = @user.questions
   end
 
   def profile
     @user = current_user
+    @questions = @user.questions
     render 'show'
   end
 
