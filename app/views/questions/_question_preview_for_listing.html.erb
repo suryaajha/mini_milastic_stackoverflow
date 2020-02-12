@@ -17,7 +17,7 @@
             <%= render 'questions/question_tags', question: question %>
           </div>
           <div class="col">
-            <p><%= "asked about #{time_ago_in_words(question.created_at)} ago by #{"Suryaa Jha"}"  %></p>
+            <%= render 'shared/time_of_asking', question: question %>
           </div>
         </div>
       </div>

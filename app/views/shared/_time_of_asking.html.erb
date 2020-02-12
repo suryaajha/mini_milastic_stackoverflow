@@ -1,0 +1,4 @@
+<p>
+  <%= "#{time_ago_in_words(question.created_at)} ago by "%>
+  <a href="<%= user_path(question.user) %>"> <%= question.user.username %> </a>
+</p>
