@@ -15,9 +15,19 @@
       <div style="display: block" class="content_area">
         <%= resource.description %>
       </div>
-      <% if resource.class == Question %>
-        <%= render 'question_tags', question: resource %>
-      <% end %>
+      <div>
+        <div class="row">
+          <div class="col-8">
+            <% if resource.class == Question %>
+              <%= render 'questions/question_tags', question: resource %>
+            <% end %>
+          </div>
+          <div class="col">
+            <%= render 'shared/time_of_asking', question: resource %>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

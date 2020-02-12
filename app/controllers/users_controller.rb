@@ -4,23 +4,15 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(users_params)
-    unless params[:user][:password] == params[:user][:password_conf]
-      flash[:alert] = 'Passwords dont match!'
-      redirect_to new_user_path and return
-    end
-    user.password_dig = params[:user][:password]
-    if user.save
-      flash[:notice] = 'You entered the world of ministackoverflow'
-      redirect_to root_path
-    else
-      flash[:alert] = 'Something went wrong. Please enter correct details!'
-      redirect_to new_user_path
-    end
   end
 
   def show
-    p new_user_registration_path.class
+    @user = User.find(params[:id])
+  end
+
+  def profile
+    @user = current_user
+    render 'show'
   end
 
   def test
