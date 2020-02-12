@@ -1,8 +1,26 @@
 <div>
-  <p>Votes: <%= question.votes %></p>
-  <p>Answers: 0</p>
-
-  <p><%= question.title %></p>
-  <p>Question Tags</p>
-  <p><%= "asked about #{time_ago_in_words(question.created_at)} ago"  %></p>
+  <div class="row">
+    <div class="col-1">
+      <p>Votes</p>
+      <p><%= question.votes %></p>
+    </div>
+    <div class="col-1">
+      <p>Answers</p>
+<!--      question.answers.size-->
+      <p><%= 0 %></p>
+    </div>
+    <div class="col">
+      <a href="<%= question_path(question) %>"> <p><%= question.title %></p> </a>
+      <div>
+        <div class="row">
+          <div class="col-8">
+            <%= render 'questions/question_tags', question: question %>
+          </div>
+          <div class="col">
+            <p><%= "asked about #{time_ago_in_words(question.created_at)} ago by #{"Suryaa Jha"}"  %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

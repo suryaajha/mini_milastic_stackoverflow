@@ -1,3 +1,4 @@
-<% @question.tags.each do |tag| %>
-  <a href=<%= tagging_path(tag.name) %> class="badge badge-primary"><%= tag %></a>
+<%= 'No Tags' if question.tags.size == 0 %>
+<% question.tags.each do |tag| %>
+  <a href="<%= tagging_path(tag.name) %>" class="badge badge-primary"><%= tag %></a>
 <% end %>

@@ -23,6 +23,9 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem "bootstrap_form", "~> 4.0"
 
+# Font awesome
+gem "font-awesome-rails"
+
 # Devise Gem for authentication
 gem 'devise'
 
