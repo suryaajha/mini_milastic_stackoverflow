@@ -1,7 +1,5 @@
 # README
 
-## Stack Overflow DIY Demo App:
-
 It is a platform where users can come and post questions and answers as well as comment like stackoverflow.com. 
 
 ### **Workflow**:
